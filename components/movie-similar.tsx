@@ -1,5 +1,5 @@
 import axios from "axios"
-import { API_URL } from "../app/(home)/page"
+import { API_URL } from "../app/constant"
 import styles from "../styles/movie-similar.module.css"
 
 const getSimilar = async ({ id }: { id: string }) => {
