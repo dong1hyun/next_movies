@@ -1,16 +1,16 @@
-movie-info.module.css
 .container {
 display: grid;
 grid-template-columns: 1fr 2fr;
 gap: 50px;
-width: 80%;
 margin: 0 auto;
+margin-bottom: 100px;
 }
 
 .poster {
 border-radius: 20px;
-max-width: 70%;
+width: 300px;
 place-self: center;
+margin: 0 auto;
 }
 
 .title {

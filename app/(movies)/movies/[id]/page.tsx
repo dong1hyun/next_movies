@@ -1,6 +1,7 @@
 import MovieVideos from "../../../../components/movie-videos"
 import MovieInfo, { getMovie } from "../../../../components/movie-info"
 import { Suspense } from "react"
+import SimilarMovie from "../../../../components/movie-similar";
 
 interface IParams {
     params: {id: string}
@@ -18,8 +19,12 @@ export default async function MovieDetail({ params: { id } }: IParams) {
         <Suspense fallback={<h1>Loading movie info</h1>}>
             <MovieInfo id={id} />
         </Suspense>
-        <Suspense fallback={<h1>Loading movie videos</h1>}>
+        {/* <Suspense fallback={<h1>Loading movie videos</h1>}>
             <MovieVideos id={id} />
+        </Suspense> */}
+        <Suspense>
+            <h3 style={{marginLeft: "100px"}}>similar movies</h3>
+            <SimilarMovie id={id} />
         </Suspense>
     </div>
 } // suspense가 component를 await 시켜주고 기다리는 동안 fallback 메시지를 내보냄
